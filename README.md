@@ -7,7 +7,7 @@ Personally, it does bug me that the Preview text shows the background for the la
 
 ---------------------------------------------------------Application---------------------------------------------------------------
 
-![alt text](https://github.com/abelberhane/MemeCreatorVersion-1/blob/master/Images/AppSH.png?raw=true)
+![alt text](https://github.com/abelberhane/MemeCreatorVersion-1/blob/master/Images/AppScreenshot.png?raw=true)
 
 -------------------------------------------------------- Meme Created --------------------------------------------------------------
-![alt text](https://github.com/abelberhane/MemeCreatorVersion-1/blob/master/Images/TestMeme.png?raw=true)
+![alt text](https://raw.githubusercontent.com/abelberhane/MemeCreatorVersion-1/master/Images/SH1.bmp)
