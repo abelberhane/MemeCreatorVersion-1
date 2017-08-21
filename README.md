@@ -4,6 +4,6 @@ Meme Creator made with C#. This will be my first attempt at opening folders in a
 Previewing an Image for the first time before being able to save it. There are new elements and some familiar elements. 
 
 -----------------------------------------------------------------------------------------------------------------------------------
-Not quite finished yet. But I wanted to upload my progress so far. 
+Will update when I have the time to work on it.
 
 ![alt text](https://github.com/abelberhane/MemeCreatorVersion-1/blob/master/Images/InitialSH.png?raw=true)
