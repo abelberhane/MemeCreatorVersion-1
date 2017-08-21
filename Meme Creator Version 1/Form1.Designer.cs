@@ -32,74 +32,54 @@
             this.open = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.topText = new System.Windows.Forms.TextBox();
             this.bottomText = new System.Windows.Forms.TextBox();
+            this.topText = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.preview = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.topLabel = new System.Windows.Forms.Label();
+            this.bottomLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
             this.SuspendLayout();
             // 
             // open
             // 
-            this.open.Location = new System.Drawing.Point(61, 413);
+            this.open.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.open.Location = new System.Drawing.Point(49, 405);
             this.open.Name = "open";
-            this.open.Size = new System.Drawing.Size(75, 23);
+            this.open.Size = new System.Drawing.Size(80, 31);
             this.open.TabIndex = 0;
             this.open.Text = "Open";
             this.open.UseVisualStyleBackColor = true;
+            this.open.Click += new System.EventHandler(this.open_Click);
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(262, 413);
+            this.save.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save.Location = new System.Drawing.Point(225, 405);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.Size = new System.Drawing.Size(88, 31);
             this.save.TabIndex = 1;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImage = global::Meme_Creator_Version_1.Properties.Resources.Background;
             this.groupBox1.Controls.Add(this.bottomText);
             this.groupBox1.Controls.Add(this.topText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(37, 26);
+            this.groupBox1.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(30, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(313, 352);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Top Text";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Bottom Text";
-            // 
-            // topText
-            // 
-            this.topText.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.topText.Location = new System.Drawing.Point(24, 78);
-            this.topText.Multiline = true;
-            this.topText.Name = "topText";
-            this.topText.Size = new System.Drawing.Size(247, 48);
-            this.topText.TabIndex = 2;
             // 
             // bottomText
             // 
@@ -109,42 +89,81 @@
             this.bottomText.Name = "bottomText";
             this.bottomText.Size = new System.Drawing.Size(247, 47);
             this.bottomText.TabIndex = 3;
+            this.bottomText.TextChanged += new System.EventHandler(this.bottomText_TextChanged);
+            // 
+            // topText
+            // 
+            this.topText.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.topText.Location = new System.Drawing.Point(24, 78);
+            this.topText.Multiline = true;
+            this.topText.Name = "topText";
+            this.topText.Size = new System.Drawing.Size(247, 48);
+            this.topText.TabIndex = 2;
+            this.topText.TextChanged += new System.EventHandler(this.topText_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 214);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Bottom Text";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Top Text";
             // 
             // preview
             // 
-            this.preview.Location = new System.Drawing.Point(445, 26);
+            this.preview.BackColor = System.Drawing.SystemColors.Control;
+            this.preview.Location = new System.Drawing.Point(371, 26);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(315, 352);
+            this.preview.Size = new System.Drawing.Size(383, 352);
+            this.preview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.preview.TabIndex = 3;
             this.preview.TabStop = false;
             // 
-            // label3
+            // topLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(454, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 26);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.topLabel.AutoSize = true;
+            this.topLabel.BackColor = System.Drawing.Color.Transparent;
+            this.topLabel.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topLabel.ForeColor = System.Drawing.Color.White;
+            this.topLabel.Location = new System.Drawing.Point(444, 40);
+            this.topLabel.Name = "topLabel";
+            this.topLabel.Size = new System.Drawing.Size(85, 34);
+            this.topLabel.TabIndex = 4;
+            this.topLabel.Text = "label3";
             // 
-            // label4
+            // bottomLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(454, 289);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 26);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
+            this.bottomLabel.AutoSize = true;
+            this.bottomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bottomLabel.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bottomLabel.ForeColor = System.Drawing.Color.White;
+            this.bottomLabel.Location = new System.Drawing.Point(445, 300);
+            this.bottomLabel.Name = "bottomLabel";
+            this.bottomLabel.Size = new System.Drawing.Size(84, 34);
+            this.bottomLabel.TabIndex = 5;
+            this.bottomLabel.Text = "label4";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Meme_Creator_Version_1.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(827, 468);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.bottomLabel);
+            this.Controls.Add(this.topLabel);
             this.Controls.Add(this.preview);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.save);
@@ -170,8 +189,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox preview;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label topLabel;
+        private System.Windows.Forms.Label bottomLabel;
     }
 }
 
